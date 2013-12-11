@@ -1,0 +1,21 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>
+//jquery version
+$.ajax({
+	dataType: "jsonp",
+	url: 'http://example.com/api.php',
+	//crossDomain: true,	
+	//data: 'callback=hello&q=book',
+	success: function(data) {
+		alert(data);
+	}
+});
+</script>
+
+<script src="http://example.com/api.php?callback=hello&q=book"></script>
+<script>
+//simple js version
+function hello(data){
+	alert(data);
+}
+</script>
